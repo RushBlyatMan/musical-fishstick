@@ -1,0 +1,52 @@
+{
+    "name": "§b§nFox Fire Aura",
+    "description": "You can toggle an aura that constantly inflicts §bFox Fire§r.",
+    "type": "origins:multiple",
+    "toggle": {
+        "type": "origins:toggle",
+        "active_by_default": false,
+        "retain_state": true,
+        "key": {
+            "key": "key.saveToolbarActivator"
+        },
+        "condition": {
+            "type": "origins:sneaking",
+            "inverted": true
+        }
+    },
+    "aura": {
+        "type": "origins:action_over_time",
+        "entity_action": {
+            "type": "origins:area_of_effect",
+        "radius": 10,
+        "bientity_action": {
+            "type": "origins:target_action",
+            "action": {
+                "type": "origins:execute_command",
+            "command": "power grant @s firefox:tail8/light"
+            }
+        }
+        },
+        "interval": 70,
+        "condition": {
+            "type": "origins:power_active",
+    "power": "firefox:tail8/aura_toggle"
+        }
+    },
+    "part": {
+        "type": "origins:particle",
+        "particle": "minecraft:soul_fire_flame",
+        "frequency": 1,
+        "count": 1,
+        "visible_in_first_person": true,
+        "spread": {
+            "x": 10, 
+            "y": 10, 
+            "z": 10
+        },
+        "condition": {
+            "type": "origins:power_active",
+    "power": "firefox:tail8/aura_toggle"
+        }
+    }
+}

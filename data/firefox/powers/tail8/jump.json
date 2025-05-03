@@ -1,0 +1,81 @@
+{
+    "name": "Fox Flight",
+    "description": "You can jump while in the air, repeated use allows for flight.",
+    "type": "origins:multiple",
+    "jump": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:and",
+                    "conditions": [
+                        {
+                            "inverted": true,
+                            "type": "origins:gamemode",
+                            "gamemode": "creative"
+                        },
+                        {
+                            "inverted": true,
+                            "type": "origins:gamemode",
+                            "gamemode": "spectator"
+                        }
+                    ]
+                },
+                {
+                    "inverted": true,
+                    "type": "origins:on_block",
+                    "block_condition": {
+                        "type": "origins:and",
+                        "conditions": [
+                            {
+                                "inverted": false,
+                                "type": "origins:block",
+                                "block": "minecraft:air"
+                            },
+                            {
+                                "inverted": true,
+                                "type": "origins:block",
+                                "block": "minecraft:water"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:add_velocity",
+                    "y": 1,
+                    "z": 0.8,
+                    "space": "local",
+                    "client": true,
+                    "server": true
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "minecraft:entity.bat.takeoff",
+                    "volume": 0.3,
+                    "pitch": 0.7
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "execute at @s run particle minecraft:soul_fire_flame ~ ~.5 ~ 0.5 0 0.5 0 50"
+                },
+                {
+                    "type": "origins:nothing"
+                }
+            ]
+        },
+        "cooldown": 10,
+        "hud_render": {
+            "should_render": false
+        },
+        "key": {
+            "key": "key.jump",
+            "continuous": false
+        }
+    }
+}

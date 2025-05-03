@@ -1,0 +1,10 @@
+{
+    "type": "origins:action_over_time",
+    "interval": 1,
+    "entity_action": {
+      "type": "origins:execute_command",
+      "command": "function firefox:clearfire"
+    },
+    "name": "§b§nFox Fire",
+    "description": "Your magic inflicts the target with §bFox Fire§r dealing armour pearcing but not protection damage every second lasting FOREVER. The damage that §bFox Fire§r deals and the effects of abilities that use it increaces as you gain more tails. You are immune to §bFox Fire§r."
+  }

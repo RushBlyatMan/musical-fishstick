@@ -1,0 +1,21 @@
+{
+    "name": "Spotted",
+    "description": "Wolfs and iron golems attack you on sight.",
+    "type": "origins:multiple",
+    "golemagro": {
+        "type": "origins:action_over_time",
+        "interval": 15,
+        "entity_action": {
+            "type": "origins:execute_command",
+            "command": "data modify entity @e[limit=1,distance=..15,type=minecraft:iron_golem,sort=nearest] AngryAt set from entity @s UUID"
+        }
+    },
+    "wolfagro": {
+        "type": "origins:action_over_time",
+        "interval": 15,
+        "entity_action": {
+            "type": "origins:execute_command",
+            "command": "data modify entity @e[limit=1,distance=..15,type=minecraft:wolf,sort=nearest] AngryAt set from entity @s UUID"
+        }
+    }
+}

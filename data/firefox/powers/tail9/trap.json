@@ -1,0 +1,115 @@
+{
+    "type": "origins:multiple",
+    "stuck": {
+        "type": "origins:modify_velocity",
+        "modifier": {
+          "value": -1,
+          "operation": "multiply_total"
+        },
+        "axes": [
+          "x",
+          "y",
+          "z"
+        ]
+      },
+      "part": {
+        "type": "origins:particle",
+        "particle": "minecraft:soul_fire_flame",
+        "frequency": 1,
+        "count": 5
+    },
+    "res": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 2,
+        "hud_render": {
+            "should_render": false
+        },
+        "max_action": {
+            "type": "origins:and",
+    "actions": [
+        {
+        "type": "origins:delay",
+    "ticks": 100,
+    "action": {
+        "type": "origins:and",
+    "actions": [
+        {
+        "type": "origins:spawn_particles",
+        "particle": {
+            "type": "minecraft:soul_fire_flame"
+        },
+        "count": 100000,
+        "speed": 0.0,
+        "force": true,
+        "spread": {
+            "x": 1.0,
+            "y": 100.0,
+            "z": 1.0
+        }
+    },
+    {
+    "type": "origins:execute_command",
+    "command": "playsound minecraft:entity.wither.death master @a ~ ~ ~ 1000000 1.3"
+    },
+    {
+    "type": "origins:execute_command",
+    "command": "gamerule showDeathMessages false"
+    },
+    {
+    "type": "origins:execute_command",
+    "command": "say had their soul eraised"
+    },
+    {
+    "type": "origins:execute_command",
+    "command": "kill @s"
+    },
+    {
+    "type": "origins:execute_command",
+    "command": "gamerule showDeathMessages true"
+    },
+    {
+    "type": "origins:execute_command",
+    "command": "particle minecraft:soul_fire_flame ~ ~ ~ 0 0 0 1 10000 force"
+    },
+    {
+        "type": "origins:execute_command",
+        "command": "resource set @s firefox:tail9/trap_res 0"
+},
+    {
+    "type": "origins:execute_command",
+    "command": "gamemode spectator"
+    },
+    {
+    "type": "origins:execute_command",
+    "command": "ban @s You where eraised from reality"
+    }
+    ]
+    }
+}
+    ]
+}
+    },
+    "deathpart": {
+        "type": "origins:action_over_time",
+        "entity_action": {
+            "type": "origins:execute_command",
+            "command": "particle minecraft:soul_fire_flame ~ ~1 ~ 0 0 0 0.1 10 force"
+        },
+        "interval": 1,
+        "condition": {
+    "type": "origins:resource",
+    "resource": "firefox:tail9/trap_res",
+    "comparison": "==",
+    "compare_to": 2
+}
+    },
+    "callback": {
+            "type": "origins:action_on_callback",
+            "entity_action_gained": {
+                "type": "origins:execute_command",
+                "command": "playsound minecraft:entity.wither.spawn master @a ~ ~ ~ 100000 1.4"
+            },
+            "execute_chosen_when_orb": true
+        }
+}

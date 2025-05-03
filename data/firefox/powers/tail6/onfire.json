@@ -1,0 +1,54 @@
+{
+    "type": "origins:multiple",
+    "water": {
+        "type": "origins:action_over_time",
+        "entity_action": {
+            "type": "origins:execute_command",
+            "command": "power revoke @s firefox:tail6/onfire"
+        },
+        "condition": {
+        "type": "origins:or",
+        "conditions": [
+            {
+                "type": "origins:fluid_height",
+                "fluid": "minecraft:water",
+                "comparison": ">",
+                "compare_to": 0
+            },
+            {
+                "type": "origins:in_rain"
+            }
+        ]
+    },
+        "interval": 1
+    },
+    "respawn": {
+        "type": "origins:action_on_callback",
+    "entity_action_respawned": {
+        "type": "origins:execute_command",
+            "command": "power revoke @s firefox:tail6/onfire"
+    }
+    },
+    "particles": {
+        "type": "origins:particle",
+        "particle": "minecraft:soul_fire_flame",
+        "visible_while_invisible": true,
+        "visible_in_first_person": true,
+        "count": 3,
+        "frequency": 1
+    },
+    "damage": {
+        "type": "origins:action_over_time",
+        "entity_action": {
+            "type": "origins:damage",
+            "amount": 5,
+            "source": {
+                "name": "magic",
+                "bypasses_armor": true,
+                "magic": true
+            }
+        },
+        "interval": 20
+    }
+
+}

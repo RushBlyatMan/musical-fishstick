@@ -1,0 +1,10 @@
+{
+    "type": "origins:action_over_time",
+    "interval": 100,
+    "entity_action": {
+      "type": "origins:execute_command",
+      "command": ""
+    },
+    "name": "§b§nFox Fire Burst",
+    "description": "Inflicting §bFox Fire§r on a entity that already has it causes it to burst dealing damage and spreading §bFox Fire§r to nearby entities."
+  }

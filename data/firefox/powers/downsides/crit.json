@@ -1,0 +1,18 @@
+{
+  "type": "origins:modify_damage_dealt",
+        "condition": {
+            "type": "origins:equipped_item",
+            "equipment_slot": "mainhand",
+            "item_condition": {
+            "type": "origins:durability",
+            "comparison": ">",
+            "compare_to": 0
+            }
+        },
+        "modifier": {
+            "operation": "multiply_total",
+            "value": -0.99
+        },
+    "name": "Weak",
+    "description": "You can't perform critical stikes, dont deal damage with weapons."
+  }

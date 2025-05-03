@@ -1,0 +1,22 @@
+{
+    "name": "§b§nFox Fire Protection",
+    "description": "You take reduced damage and those who attack you are inflicted with §bFox Fire§r.",
+    "type": "origins:multiple",
+    "defence": {
+        "type": "origins:modify_damage_taken",
+        "modifier": {
+            "operation": "multiply_total",
+            "value": -0.84
+        }
+    },
+    "thorns": {
+        "type": "origins:action_when_hit",
+        "bientity_action": {
+            "type": "origins:actor_action",
+    "action": {
+        "type": "origins:execute_command",
+        "command": "power grant @s firefox:tail8/light"
+    }
+        }
+}
+}

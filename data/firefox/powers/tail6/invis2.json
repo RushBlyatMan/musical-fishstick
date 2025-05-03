@@ -1,0 +1,38 @@
+
+{"type": "origins:multiple",
+"invis2": {
+    "type": "origins:invisibility",
+    "render_armor": true,
+    "condition": {
+        "type": "origins:resource",
+    "resource": "firefox:tail6/invis_toggle",
+    "comparison": "==",
+    "compare_to": 1
+    }
+},
+"hit": {
+"type": "origins:self_action_on_hit",
+"entity_action": {
+    "type": "origins:and",
+    "actions": [
+        {
+"type": "origins:change_resource",
+"resource": "firefox:tail6/invis_toggle",
+"change": 0,
+"operation": "set"
+        },
+    {
+        "type": "origins:trigger_cooldown",
+        "power": "firefox:tail6/invis_trigger"
+    }
+    ]
+},
+"condition": {
+    "type": "origins:resource",
+"resource": "firefox:tail6/invis_toggle",
+"comparison": "==",
+"compare_to": 1
+}
+},
+ "hidden": true
+} 

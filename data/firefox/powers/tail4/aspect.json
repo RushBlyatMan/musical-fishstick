@@ -1,0 +1,27 @@
+{
+    "name": "§b§nFox Fire Aspect",
+    "description": "Your attacks deal Fox Fire damage and inflict §bFox Fire§r.",
+    "type": "origins:multiple",
+    "fire": {
+        "type": "origins:action_on_hit",
+    "bientity_action": {
+        "type": "origins:target_action",
+    "action": {
+        "type": "origins:execute_command",
+        "command": "power grant @s firefox:tail4/onfire"
+    }
+    }
+    },
+    "burn": {
+        "type": "origins:action_on_hit",
+    "bientity_action": {
+        "type": "origins:damage",
+            "amount": 4,
+            "source": {
+                "name": "magic",
+                "bypasses_armor": true,
+                "magic": true
+            }
+    }
+    }
+}

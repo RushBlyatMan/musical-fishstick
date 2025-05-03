@@ -1,0 +1,25 @@
+{
+    "name": "Fox",
+    "description": "You look like and have the health of a fox.",
+    "type": "origins:multiple",
+    "tag": {
+      "type": "origins:action_on_callback",
+      "entity_action_gained": {
+          "type": "origins:execute_command",
+          "command": "walkers change2ndShape @s minecraft:fox"
+      },
+      "entity_action_lost": {
+          "type": "origins:execute_command",
+          "command": "walkers remove2ndShape @s"
+      },
+      "execute_chosen_when_orb": true
+    },
+    "forcefox": {
+        "type": "origins:action_over_time",
+        "entity_action": {
+            "type": "origins:execute_command",
+          "command": "walkers switchShape @s minecraft:fox"
+        },
+        "interval": 100
+    }
+}

@@ -1,0 +1,40 @@
+{
+    "name": "3nd Tail",
+    "description": "You have 3 tails, your fourth one will grow with time.",
+    "type": "origins:multiple",
+    "resource": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 288,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_01.png",
+            "bar_index": 0
+        },
+        "max_action": {
+            "type": "origins:execute_command",
+            "command": "function firefox:grow4th"
+        }
+    },
+    "increase": {
+        "type": "origins:action_over_time",
+        "entity_action": {
+            "type": "origins:change_resource",
+            "resource": "firefox:tail3/growtail_resource",
+            "change": 1
+        },
+        "interval": 6000
+    },
+    "reset": {
+        "type": "origins:action_on_callback",
+        "entity_action_gained": {
+            "type": "origins:execute_command",
+            "command": "resource set @s firefox:tail3/growtail_resource 0"
+        },
+        "entity_action_respawned": {
+            "type": "origins:execute_command",
+            "command": "origin set @s origins:origin firefox:kitsune2"
+        },
+        "execute_chosen_when_orb": true
+      }
+}

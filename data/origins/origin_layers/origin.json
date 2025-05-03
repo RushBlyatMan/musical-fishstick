@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "origins": [
+    "firefox:kitsune",
+    "firefox:kitsune2",
+    "firefox:kitsune3",
+    "firefox:kitsune4",
+    "firefox:kitsune5",
+    "firefox:kitsune6",
+    "firefox:kitsune7",
+    "firefox:kitsune8",
+    "firefox:kitsune9"
+  ]
+}

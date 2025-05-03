@@ -1,0 +1,52 @@
+{
+    "name": "Domain of peace",
+    "description": "You can take yourself and any entity into and out of your realm.",
+    "type": "origins:multiple",
+    "death": {
+        "type": "origins:prevent_death",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:apply_effect",
+                    "effects": [
+                        {
+                            "effect": "minecraft:regeneration",
+                            "amplifier": 255,
+                            "duration": 5
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:execute_command",
+                "command": "execute in minecraft:overworld run tp @s ~ ~ ~"
+                },
+                {
+                "type": "origins:delay",
+    "ticks": 60,
+    "action": {
+            "type": "origins:execute_command",
+            "command": "spreadplayers ~ ~ 0 1 false @e[distance=0..10]"
+        }
+                },
+                {
+                    "type": "origins:execute_command",
+                "command": "power revoke @s firefox:tail7/visit"
+                }
+            ]
+        }
+    },
+    "fail": {
+        "type": "origins:action_over_time",
+        "entity_action": {
+            "type": "origins:execute_command",
+                "command": "power revoke @s firefox:tail7/visit"
+        },
+        "condition": {
+    "type": "origins:dimension",
+    "dimension": "firefox:kitsune",
+    "inverted": true
+},
+        "interval": 1
+    }
+}

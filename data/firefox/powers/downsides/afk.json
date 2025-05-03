@@ -1,0 +1,14 @@
+{
+    "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:execute_command",
+            "command": "damage @s 10 generic_kill"
+        },
+        "condition": {
+    "type": "origins:food_level",
+    "comparison": "==",
+    "compare_to": 0
+},
+        "hidden": true
+}

@@ -1,0 +1,3 @@
+execute at @a[tag=crown] positioned ~ ~1.9 ~ run function pact:crown
+title @a[tag=decide] actionbar ["",{"text":"Make A Choice, Right Click To Accept, Shift Right Click To Decline","italic":true,"bold":true,"color":"gold"}]
+title @a[tag=leave] actionbar ["",{"text":"You May End The Contract, Right Click To Break The Contract, Shift Right Click To Keep It","italic":true,"bold":true,"color":"gold"}]

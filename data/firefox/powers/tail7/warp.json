@@ -1,0 +1,103 @@
+{
+    "name": "Domain of peace",
+    "description": "You can take yourself and any entity into and out of your realm. (must be sneaking)",
+    "type": "origins:multiple",
+    "warp": {
+        "type": "origins:active_self",
+        "entity_action": {
+    "type": "origins:and",
+    "actions": [
+        {    
+            "type": "origins:execute_command",
+            "command": "playsound minecraft:block.beacon.power_select master @a ~ ~ ~ 100 0"
+        },
+        {    
+            "type": "origins:delay",
+    "ticks": 20,
+    "action": {
+        "type": "origins:and",
+    "actions": [
+        {
+        "type": "origins:execute_command",
+            "command": "particle minecraft:cherry_leaves ~ ~ ~ 3 3 3 1 10000 normal"
+        },
+        {
+            "type": "origins:execute_command",
+            "command": "execute at @e[distance=0..5] run execute as @e[distance=0..5] in firefox:kitsune run tp @s ~ ~ ~"
+        },
+        {
+            "type": "origins:delay",
+    "ticks": 50,
+    "action": {
+            "type": "origins:execute_command",
+            "command": "power grant @e[distance=0..10] firefox:tail7/visit"
+    }
+        }
+    ]
+    }
+        }
+    ]
+},
+"condition": {
+    "type": "origins:and",
+    "conditions": [
+        {
+            "type": "origins:dimension",
+"dimension": "firefox:kitsune",
+"inverted": true
+        },
+        {      
+            "type": "origins:sneaking"
+        }
+    ]
+},
+"key": {
+    "key": "key.saveToolbarActivator"
+}
+    },
+    "out": {
+        "type": "origins:active_self",
+        "entity_action": {
+    "type": "origins:and",
+    "actions": [
+        {    
+            "type": "origins:execute_command",
+            "command": "playsound minecraft:block.beacon.power_select master @a ~ ~ ~ 100 0"
+        },
+        {    
+            "type": "origins:delay",
+    "ticks": 20,
+    "action": {
+        "type": "origins:and",
+    "actions": [
+        {
+        "type": "origins:execute_command",
+            "command": "particle minecraft:cherry_leaves ~ ~ ~ 3 3 3 1 10000 normal"
+        },
+        {
+            "type": "origins:execute_command",
+            "command": "execute at @e[distance=0..5] run execute as @e[distance=0..5] in minecraft:overworld run tp @s ~ ~ ~"
+        }
+    ]
+    }
+        }
+    ]
+},
+"condition": {
+    "type": "origins:and",
+    "conditions": [
+        {
+            "type": "origins:dimension",
+"dimension": "firefox:kitsune",
+"inverted": false
+        },
+        {      
+            "type": "origins:sneaking"
+        }
+    ]
+},
+"key": {
+    "key": "key.saveToolbarActivator"
+}
+    }
+}

@@ -1,0 +1,30 @@
+{
+	"powers": [
+		"firefox:tail7/growtail",
+		"firefox:tail2/shift",
+		"firefox:tail5/shape",
+		"firefox:tail4/mobility",
+		"firefox:tail1/eyes",
+		"firefox:tail3/sight",
+		"firefox:tail6/invis",
+		"firefox:tail6/invis2",
+		"firefox:tail7/warp",
+		"firefox:tail2/foxfire",
+		"firefox:tail7/detonate",
+		"firefox:tail7/aura",
+		"firefox:tail7/aspect",
+		"firefox:tail5/burst",
+		"firefox:tail7/protect",
+		"firefox:downsides/crit",
+		"firefox:downsides/hunters",
+		"firefox:downsides/magic",
+		"firefox:downsides/armourless",
+		"firefox:downsides/afk"
+	],
+	"icon": "minecraft:sweet_berries",
+	"order": 10,
+	"impact": 3,
+	"name": "Kitsune",
+	"description": "Fox sprits said to grow increibly powerful and wise with age.",
+	"unchoosable": true
+}

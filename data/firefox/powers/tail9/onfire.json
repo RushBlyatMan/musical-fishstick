@@ -1,0 +1,32 @@
+{
+    "type": "origins:multiple",
+    "respawn": {
+        "type": "origins:action_on_callback",
+    "entity_action_respawned": {
+        "type": "origins:execute_command",
+            "command": "power revoke @s firefox:tail9/onfire"
+    }
+    },
+    "particles": {
+        "type": "origins:particle",
+        "particle": "minecraft:soul_fire_flame",
+        "visible_while_invisible": true,
+        "visible_in_first_person": true,
+        "count": 3,
+        "frequency": 1
+    },
+    "damage": {
+        "type": "origins:action_over_time",
+        "entity_action": {
+            "type": "origins:damage",
+            "amount": 8,
+            "source": {
+                "name": "magic",
+                "bypasses_armor": true,
+                "magic": true
+            }
+        },
+        "interval": 20
+    }
+
+}

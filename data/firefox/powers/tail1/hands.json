@@ -1,0 +1,40 @@
+{
+    "name": "Hands?",
+    "description": "You don't have hands, you can not use tools or weapons",
+    "type": "origins:multiple",
+    "shields": {
+      "type": "origins:prevent_item_use",
+    "item_condition": {
+        "type": "origins:ingredient",
+        "ingredient": {
+            "item": "minecraft:shield"
+        }
+    }
+    },
+    "break": {
+		"type": "origins:modify_break_speed",
+        "block_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:block",
+                    "block": "minecraft:air",
+                    "inverted": true
+                }
+            ]
+        },
+        "modifier": {
+            "operation": "multiply_total",
+            "value": -1
+        },
+        "condition": {
+    "type": "origins:equipped_item",
+    "equipment_slot": "mainhand",
+    "item_condition": {
+    "type": "origins:durability",
+    "comparison": ">",
+    "compare_to": 0
+    }
+}
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "type": "origins:particle",
+    "particle": "minecraft:soul_fire_flame",
+    "visible_while_invisible": false,
+    "visible_in_first_person": false,
+    "count": 1,
+    "frequency": 10,
+    "hidden": true
+}

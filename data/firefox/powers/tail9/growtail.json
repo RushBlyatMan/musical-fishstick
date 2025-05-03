@@ -1,0 +1,13 @@
+{
+    "name": "9 Tailed Fox",
+    "description": "You have all 9 tails becoming a kyūbi no kitsune and no longer lose your tails on death.",
+    "type": "origins:multiple",
+    "reset": {
+        "type": "origins:action_on_callback",
+        "entity_action_gained": {
+            "type": "origins:execute_command",
+            "command": "resource set @s firefox:tail8/growtail_resource 0"
+        },
+        "execute_chosen_when_orb": true
+      }
+}

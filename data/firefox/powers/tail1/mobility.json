@@ -1,0 +1,42 @@
+{
+    "name": "Agile",
+    "description": "You have increaced agility and dont take fall damage.",
+    "type": "origins:multiple",
+    "effectszzad": {
+      "type": "origins:modify_velocity",
+      "modifier": {
+        "value": 0.5,
+        "operation": "multiply_total"
+      },
+      "axes": [
+        "x",
+        "z"
+      ],
+      "condition": {
+        "type": "origins:sprinting"
+      }
+    },
+    "jump": {
+      "type": "origins:modify_jump",
+      "modifier": {
+        "operation": "multiply_total",
+        "value": 0.5
+      },
+      "condition": {
+        "type": "origins:sprinting"
+      }
+    },
+    "fallz": {
+    "type": "origins:action_over_time",
+    "interval": 1,
+    "condition": {
+      "type": "origins:fall_distance",
+      "comparison": "<=",
+      "compare_to": 8
+    },
+    "entity_action": {
+        "type": "origins:set_fall_distance",
+        "fall_distance": 0
+    }
+  }
+}
